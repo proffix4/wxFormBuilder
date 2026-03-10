@@ -109,7 +109,7 @@ wxString CppTemplateParser::ValueToCode(PropertyType type, const wxString& value
                 result << wxT("wxEmptyString");
             } else {
                 if (m_i18n) {
-                    result << wxT("_(\"") << CppCodeGenerator::ConvertCppString(value) << wxT("\")");
+                    result << wxT("_(L\"") << CppCodeGenerator::ConvertCppString(value) << wxT("\")");
                 } else {
                     result << wxT("wxT(\"") << CppCodeGenerator::ConvertCppString(value) << wxT("\")");
                 }
